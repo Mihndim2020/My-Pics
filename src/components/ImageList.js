@@ -1,7 +1,10 @@
+import ImageShow from "./ImageShow.js";
+
 const ImageList = () => {
   return (
     <div>
-      <h1>Welcome to My Pics ImageList</h1>
+      <h1>Welcome to my ImageList</h1>
+      <ImageShow />
     </div>
   );
 };

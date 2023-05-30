@@ -1,7 +1,14 @@
+import { useState } from "react";
+import ImageList from "./components/ImageList";
+import SearchBar from "./components/SearchBar";
+
 const App = () => {
+  const [images, setImages] = useState([]);
+  console.log(images);
   return (
     <div>
-      <h1>Welcome to My Pics App</h1>
+      <SearchBar setImages={setImages} />
+      <ImageList images={images} />
     </div>
   );
 };

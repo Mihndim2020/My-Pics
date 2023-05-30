@@ -1,3 +1,4 @@
+import "./SearchBar.css";
 import { useState } from "react";
 import searchImages from "../api";
 
@@ -16,9 +17,9 @@ const SearchBar = ({ getImages }) => {
   };
 
   return (
-    <div>
-      <h1>Welcome my Search Bar</h1>
+    <div className="search-bar">
       <form onSubmit={handleFormSubmit}>
+        <label>Please enter your search term: </label>
         <input
           value={searchTerm}
           onChange={handleChange}

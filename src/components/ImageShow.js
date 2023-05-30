@@ -1,7 +1,12 @@
-const ImageShow = () => {
+const ImageShow = ({ image }) => {
   return (
     <div>
-      <h1>Welcome to My Pics ImageShow</h1>
+      <img
+        alt="display-images"
+        src={image.urls.raw}
+        style={{ width: 200, height: 200, padding: 5 }}
+      />
+      <p>{image.alt_description}</p>
     </div>
   );
 };

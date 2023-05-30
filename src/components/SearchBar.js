@@ -8,9 +8,9 @@ const SearchBar = ({ getImages }) => {
     setSearchTerm(event.target.value);
   };
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
-    const images = searchImages(searchTerm);
+    const images = await searchImages(searchTerm);
     getImages(images);
     setSearchTerm("");
   };

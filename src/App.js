@@ -4,7 +4,6 @@ import SearchBar from "./components/SearchBar";
 
 const App = () => {
   const [images, setImages] = useState([]);
-  console.log(images);
   return (
     <div>
       <SearchBar getImages={setImages} />

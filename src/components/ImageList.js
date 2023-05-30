@@ -1,6 +1,7 @@
 import ImageShow from "./ImageShow.js";
 
-const ImageList = () => {
+const ImageList = ({ images }) => {
+  console.log(images);
   return (
     <div>
       <h1>Welcome to my ImageList</h1>

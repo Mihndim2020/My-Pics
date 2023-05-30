@@ -1,22 +1,29 @@
 import { useState } from "react";
 import searchImages from "../api";
 
-const SearchBar = ({ setImages }) => {
+const SearchBar = ({ getImages }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const handleSubmit = (event) => {
+
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-    const search = event.target.value;
-    setSearchTerm(search);
     const images = searchImages(searchTerm);
-    setImages(images);
+    getImages(images);
     setSearchTerm("");
   };
+
   return (
     <div>
-      <h1>Welcome to my ImageList</h1>
-      <form onSubmit={handleSubmit}>
-        <input styles={{ width: 100, height: 30 }} value={searchTerm} />
-        <button>Submit</button>
+      <h1>Welcome my Search Bar</h1>
+      <form onSubmit={handleFormSubmit}>
+        <input
+          value={searchTerm}
+          onChange={handleChange}
+          styles={{ width: 100, height: 30 }}
+        />
       </form>
     </div>
   );

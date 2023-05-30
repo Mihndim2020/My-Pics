@@ -7,7 +7,7 @@ const App = () => {
   console.log(images);
   return (
     <div>
-      <SearchBar setImages={setImages} />
+      <SearchBar getImages={setImages} />
       <ImageList images={images} />
     </div>
   );
